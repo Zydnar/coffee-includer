@@ -25,7 +25,7 @@ file.coffee
 
 ```coffeescript
 do awsome_things in coding unless
-  awsome_things isnt boring
+  awsome_things is boring
 ```
 
 output.coffee
@@ -35,7 +35,7 @@ foo = ->
   bar()
   #file.coffee contents is placed, where you need it!
   do awsome_things in coding unless
-    awsome_things isnt boring
+    awsome_things is boring
 ```
 
 ### CLI command
@@ -46,7 +46,7 @@ coffee-includer main.coffee ./build/output.coffee
 
 ## Looking for gulp plugin?
 
-### See [*gulp-coffee-includer*](https://github.com/Zydnar/coffee-includer-gulp.git)
+### See [*gulp-coffee-includer*](https://github.com/Zydnar/gulp-coffee-includer)
 
 ## License
 
