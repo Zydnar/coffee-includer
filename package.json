@@ -1,7 +1,7 @@
 {
   "name": "coffee-includer",
   "version": "1.0.0",
-  "description": "With coffee-includer you can finally include files with proper intendation.",
+  "description": "Using coffee-includer you can finally include files with proper intendation.",
   "main": "index.js",
   "scripts": {
     "test": "jasmine"

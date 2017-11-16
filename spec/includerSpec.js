@@ -1,4 +1,4 @@
-describe("Coffee-coffee-includer.js:", function () {
+describe("Coffee-includer.js:", function () {
     const fs = require('fs'),
         path = require('path'),
         CI = require('../lib/main.js'),
@@ -121,7 +121,7 @@ describe("Coffee-coffee-includer.js:", function () {
             const input = fs.createReadStream('./spec/test_.txt', {
                 'bufferSize': 4 * 1024
             }), buffers = {1: [], 2: []};
-            let str = input
+            input
                 .pipe(through2.obj(function (chunk, enc, callback) {
                     buffers[1].push(chunk);
                     this.push(chunk);
@@ -131,8 +131,10 @@ describe("Coffee-coffee-includer.js:", function () {
                 .pipe(through2.obj(function (chunk, enc, callback) {
                     buffers[2].push(chunk);
                     this.push(chunk);
-                    for(let b in buffers[1]){
-                        expect(buffers[1][b]).not.toEqual(buffers[2][b]);
+                    for (let b in buffers[1]) {
+                        expect(buffers[1][b]).not.toEqual(buffers[2][b]); //TODO this is ignored and test always succeeds
+                        expect(buffers[2][b]).not.toEqual(null);
+                        expect(buffers[2][b]).not.toEqual("");
                     }
                     callback()
                 }));
