@@ -38,7 +38,7 @@ foo = ->
     awsome_things isnt boring
 ```
 
-###CLI command
+### CLI command
 
 ```bash
 coffee-includer main.coffee ./build/output.coffee
@@ -50,4 +50,4 @@ coffee-includer main.coffee ./build/output.coffee
 
 ## License
 
-###MIT
+### MIT
