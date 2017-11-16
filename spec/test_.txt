@@ -1,0 +1,5 @@
+wdwdwdw
+  #=include <foo.txt>
+   albo flak nie
+#=include <foo1.txt>
+#=include <foo2.txt>
