@@ -1,6 +1,6 @@
 {
   "name": "coffee-includer",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Using coffee-includer you can finally include files with proper intendation.",
   "main": "index.js",
   "scripts": {
@@ -34,13 +34,36 @@
   },
   "homepage": "https://github.com/Zydnar/coffee-includer#readme",
   "dependencies": {
-    "gulp-util": "^3.0.8",
     "util.promisify": "^1.0.0",
+    "vinyl": "latest",
     "yargs": "^10.0.3"
   },
   "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
     "jasmine": "^2.8.0",
     "through2": "^2.0.3"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "transform-runtime",
+        {
+          "polyfill": false,
+          "regenerator": true
+        }
+      ]
+    ],
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "6.0.0"
+          }
+        }
+      ]
+    ]
   }
 }
